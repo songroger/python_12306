@@ -1,21 +1,10 @@
 import datetime
-import time
 from queue import Queue
 from threading import Thread
 
 from python12306.config import Config
-
-from python12306.logic.login.checkuser import OnlineCheckerTool
-from python12306.logic.login.login import NormalLogin
-from python12306.logic.login.passager import QueryPassengerTool
 from python12306.logic.query.dispatcher import DispatcherTool
-from python12306.logic.submit.fastsubmit import FastSubmitDcOrder
-from python12306.logic.submit.submit import NormalSubmitDcOrder
-
 from python12306.scheduler import Schedule as BaseSchedule
-
-from python12306.utils.send_email import send_email
-from python12306.utils.log import Log
 
 
 class Worker(Thread):
